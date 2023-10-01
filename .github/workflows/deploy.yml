@@ -1,0 +1,40 @@
+name: Deploy Preview
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+      
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+        
+    - name: Install Dependencies
+      run: npm ci
+      
+    - name: Build Project
+      run: npm run build
+      
+    - name: Install http-server
+      run: npm install -g http-server
+      
+    - name: Start http-server
+      run: http-server -p 8080 .next &
+      
+    - name: Expose to the web with ngrok
+      run: npx ngrok http 8080
+      env:
+        NGROK_TOKEN: ${{ secrets.NGROK_TOKEN }}
+
