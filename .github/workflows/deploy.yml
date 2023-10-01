@@ -39,11 +39,12 @@ jobs:
     - name: Expose to the web with ngrok
       id: ngrok
       run: |
-        npx ngrok http 8080 &
-        sleep 10 # Let ngrok initialize
         sudo apt-get install jq -y
+        npx ngrok http 8080 --region us --authtoken ${{ secrets.NGROK_TOKEN }} &
+        sleep 10 # Let ngrok initialize
         url=$(curl http://localhost:4040/api/tunnels | jq -r '.tunnels[0].public_url')
-        echo "::set-output name=url::$url"
+        echo "NGROK_URL=$url" >> $GITHUB_ENV
+    
     
     - name: Print ngrok URL
       run: echo "Ngrok URL is ${{ steps.ngrok.outputs.url }}"
