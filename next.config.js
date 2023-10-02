@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
   reactStrictMode: true,
-  //basePath: '/decentra-world-web',
-  //assetPrefix: '/decentra-world-web/public/',
-}
+  assetPrefix: isProd ? '/decentra-world-web/' : '',
+};
 
 module.exports = nextConfig;
-
