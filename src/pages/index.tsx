@@ -1,6 +1,10 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
-import Image from 'next/image';
+import getConfig from 'next/config';
+
+const { publicRuntimeConfig } = getConfig();
+const assetPrefix = publicRuntimeConfig.assetPrefix || '';
+
 
 const Homepage: NextPage = () => {
   return (
@@ -11,7 +15,7 @@ const Homepage: NextPage = () => {
           <img 
               className={styles.imagePlaceholderCopyPaste}
               alt=""
-              src="/image-placeholder-copy-paste-here@2x.png"
+              src="${assetPrefix}/image-placeholder-copy-paste-here@2x.png"
             />
           </div>
           <div className={styles.text}>
@@ -21,27 +25,27 @@ const Homepage: NextPage = () => {
               <img
                   className={styles.c7ad661Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
                 <img
                   className={styles.c7ad662Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
                 <img
                   className={styles.c7ad663Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
                 <img
                   className={styles.c7ad664Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
                 <img
                   className={styles.c7ad665Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
               </div>
               <div className={styles.gameId1111122222Container}>
@@ -56,7 +60,7 @@ const Homepage: NextPage = () => {
             <img
               className={styles.imagePlaceholderCopyPaste}
               alt=""
-              src="/image-placeholder-copy-paste-here@2x.png"
+              src="${assetPrefix}/image-placeholder-copy-paste-here@2x.png"
             />
           </div>
           <div className={styles.text}>
@@ -68,27 +72,27 @@ const Homepage: NextPage = () => {
                 <img
                   className={styles.c7ad661Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
                 <img
                   className={styles.c7ad662Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
                 <img
                   className={styles.c7ad663Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
                 <img
                   className={styles.c7ad664Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
                 <img
                   className={styles.c7ad665Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
               </div>
               <div className={styles.gameId1111122222Container}>
@@ -103,7 +107,7 @@ const Homepage: NextPage = () => {
           <img
               className={styles.imagePlaceholderCopyPaste}
               alt=""
-              src="/image-placeholder-copy-paste-here@2x.png"
+              src="${assetPrefix}/image-placeholder-copy-paste-here@2x.png"
             />
           </div>
           <div className={styles.text}>
@@ -113,27 +117,27 @@ const Homepage: NextPage = () => {
               <img
                   className={styles.c7ad661Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
                 <img
                   className={styles.c7ad662Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
                 <img
                   className={styles.c7ad663Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
                 <img
                   className={styles.c7ad664Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
                 <img
                   className={styles.c7ad665Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
               </div>
               <div className={styles.gameId1111122222Container}>
@@ -148,7 +152,7 @@ const Homepage: NextPage = () => {
           <img
               className={styles.imagePlaceholderCopyPaste}
               alt=""
-              src="/image-placeholder-copy-paste-here@2x.png"
+              src="${assetPrefix}/image-placeholder-copy-paste-here@2x.png"
             />
           </div>
           <div className={styles.text}>
@@ -158,27 +162,27 @@ const Homepage: NextPage = () => {
               <img
                   className={styles.c7ad661Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
                 <img
                   className={styles.c7ad662Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
                 <img
                   className={styles.c7ad663Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
                 <img
                   className={styles.c7ad664Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
                 <img
                   className={styles.c7ad665Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
               </div>
               <div className={styles.gameId1111122222Container}>
@@ -193,7 +197,7 @@ const Homepage: NextPage = () => {
           <img
               className={styles.imagePlaceholderCopyPaste}
               alt=""
-              src="/image-placeholder-copy-paste-here@2x.png"
+              src="${assetPrefix}/image-placeholder-copy-paste-here@2x.png"
             />
           </div>
           <div className={styles.text}>
@@ -203,27 +207,27 @@ const Homepage: NextPage = () => {
               <img
                   className={styles.c7ad661Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
                 <img
                   className={styles.c7ad662Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
                 <img
                   className={styles.c7ad663Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
                 <img
                   className={styles.c7ad664Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
                 <img
                   className={styles.c7ad665Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
               </div>
               <div className={styles.gameId1111122222Container}>
@@ -238,7 +242,7 @@ const Homepage: NextPage = () => {
             <img
               className={styles.imagePlaceholderCopyPaste}
               alt=""
-              src="/image-placeholder-copy-paste-here@2x.png"
+              src="${assetPrefix}/image-placeholder-copy-paste-here@2x.png"
             />
           </div>
           <div className={styles.text}>
@@ -248,27 +252,27 @@ const Homepage: NextPage = () => {
                 <img
                   className={styles.c7ad661Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
                 <img
                   className={styles.c7ad662Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
                 <img
                   className={styles.c7ad663Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
                 <img
                   className={styles.c7ad664Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
                 <img
                   className={styles.c7ad665Icon}
                   alt=""
-                  src="/25c7ad66-1@2x.png"
+                  src="${assetPrefix}/25c7ad66-1@2x.png"
                 />
               </div>
               <div className={styles.gameId1111122222Container}>
@@ -296,7 +300,7 @@ const Homepage: NextPage = () => {
             <img
             className={styles.iconsaxlineartrendup}
             alt=""
-            src="/iconsaxlineartrendup.svg"
+            src="${assetPrefix}/iconsaxlineartrendup.svg"
           />
           </div>
           
@@ -304,7 +308,7 @@ const Homepage: NextPage = () => {
       </div>
       <div className={styles.bannerSlogan}>
         <div className={styles.banner}>
-          <img className={styles.imageIcon} alt="" src="/image@2x.png" />
+          <img className={styles.imageIcon} alt="" src="${assetPrefix}/image@2x.png" />
           <div className={styles.card} />
           <b className={styles.inviteFriendsTo}>
             Invite friends to win our NFT gifts!
@@ -318,7 +322,7 @@ const Homepage: NextPage = () => {
       <div className={styles.searchBar}>
         <div className={styles.iconsaxlinearsearchnormal1Parent}>
           <div className={styles.iconsaxlinearsearchnormal1}>
-            <img className={styles.vectorIcon} alt="" src="/vector.svg" />
+            <img className={styles.vectorIcon} alt="" src="${assetPrefix}/vector.svg" />
           </div>
           <div className={styles.searchByUserid}>
             Search by userID or starID
@@ -326,7 +330,7 @@ const Homepage: NextPage = () => {
         </div>
       </div>
       <div className={styles.user}>
-        <img className={styles.userChild} alt="" src="/rectangle-9@2x.png" />
+        <img className={styles.userChild} alt="" src="${assetPrefix}/rectangle-9@2x.png" />
       </div>
       <div className={styles.topNavigationBar}>
         <div className={styles.home}>Home</div>
