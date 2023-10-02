@@ -7,6 +7,7 @@ const assetPrefix = publicRuntimeConfig.assetPrefix || '';
 
 
 const Homepage: NextPage = () => {
+  console.log("assetPrefix is: ", assetPrefix);
   return (
     <div className={styles.homepage}>
       <div className={styles.newsList}>
