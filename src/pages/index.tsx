@@ -8,6 +8,9 @@ const assetPrefix = publicRuntimeConfig.assetPrefix || '';
 
 const Homepage: NextPage = () => {
   console.log("assetPrefix is: ", assetPrefix);
+  console.log('NODE_ENV is:', process.env.NODE_ENV);
+  console.log("isProd is: ", isProd);
+
   return (
     <div className={styles.homepage}>
       <div className={styles.newsList}>
