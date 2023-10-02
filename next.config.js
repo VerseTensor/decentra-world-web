@@ -1,14 +1,8 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === 'production';
-console.log("isProd is: ", isProd);
-console.log("isProd in next.config.js: ", isProd);
-console.log("assetPrefix in next.config.js: ", isProd ? '/decentra-world-web' : '');
-
 
 const nextConfig = {
   reactStrictMode: true,
-  assetPrefix: isProd ? '/decentra-world-web' : '',
-  basePath: isProd ? '/decentra-world-web' : '',
+  assetPrefix: process.env.ASSET_PREFIX || '',
 };
 
 module.exports = nextConfig;

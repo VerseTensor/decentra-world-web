@@ -28,6 +28,8 @@ jobs:
       run: |
            npm run build
            npm run export
+      env:
+        ASSET_PREFIX: '/decentra-world-web'
     
     - name: List Contents
       run: ls -la /home/runner/work/decentra-world-web/decentra-world-web
