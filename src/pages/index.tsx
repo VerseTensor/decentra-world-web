@@ -311,7 +311,7 @@ const Homepage: NextPage = () => {
           <img className={styles.imageIcon} alt="" src="${assetPrefix}/image@2x.png" />
           <div className={styles.card} />
           <b className={styles.inviteFriendsTo}>
-            Invite friends to win our NFT gifts!
+            Invite friends to win our NFT gifts! 
           </b>
           <b className={styles.experienceAndSwim}>
             Experience and swim in the world！
