@@ -300,7 +300,7 @@ const Homepage: NextPage = () => {
             <img
             className={styles.iconsaxlineartrendup}
             alt=""
-            src={'${assetPrefix}/iconsaxlineartrendup.svg"
+            src={'${assetPrefix}/iconsaxlineartrendup.svg'}
           />
           </div>
           
@@ -322,7 +322,7 @@ const Homepage: NextPage = () => {
       <div className={styles.searchBar}>
         <div className={styles.iconsaxlinearsearchnormal1Parent}>
           <div className={styles.iconsaxlinearsearchnormal1}>
-            <img className={styles.vectorIcon} alt="" src={'${assetPrefix}/vector.svg" />
+            <img className={styles.vectorIcon} alt="" src={'${assetPrefix}/vector.svg'} />
           </div>
           <div className={styles.searchByUserid}>
             Search by userID or starID
