@@ -11,34 +11,48 @@ on:
 jobs:
   preview:
     runs-on: ubuntu-latest
-
+    
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
-
+      
     - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
         node-version: '16'
-
+        
     - name: Install Dependencies
       run: npm install
-
+      
     - name: Build Project
       run: npm run build
-
+      
     - name: Start Next.js Server
-      run: npm run start &
-
+      run: npm run start -p 3000 &
+      
+    - name: Check server accessibility
+      run: curl http://localhost:3000
+      
     - name: Authenticate ngrok
       run: npx ngrok authtoken ${{ secrets.NGROK_TOKEN }}
-
+      
     - name: Expose to the web with ngrok
       run: |
         npx ngrok http 3000 --region us --authtoken ${{ secrets.NGROK_TOKEN }} &
         sleep 10
+        
+    - name: Print ngrok status
+      run: curl --silent http://localhost:4040/api/tunnels
+      
+    - name: Debug Step
+      run: |
+        curl --silent http://localhost:4040/api/tunnels
+        curl http://localhost:3000
+      
+    - name: Get ngrok URL
+      run: |
         url=$(curl --silent http://localhost:4040/api/tunnels | jq -r '.tunnels[0].public_url')
         echo "NGROK_URL=$url" >> $GITHUB_ENV
-
+    
     - name: Print ngrok URL
       run: echo "Ngrok URL is $NGROK_URL"
