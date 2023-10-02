@@ -28,7 +28,7 @@ jobs:
       run: npm run build
       
     - name: Start Next.js Server
-      run: npm run start -p 3000 &
+      run: npm run start -- -p 3000 &
       
     - name: Check server accessibility
       run: curl http://localhost:3000
